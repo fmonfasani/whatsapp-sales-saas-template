@@ -42,9 +42,7 @@ class TestOnboardingFlow:
         # Fresh isolated stack — onboarding mutates the repo/spawner/event-bus.
         return Client(event_bus=InMemoryEventBus())
 
-    async def test_creates_tenant_renders_soul_spawns_and_emits_event(
-        self, client: Client
-    ) -> None:
+    async def test_creates_tenant_renders_soul_spawns_and_emits_event(self, client: Client) -> None:
         bus = client.event_bus
         assert isinstance(bus, InMemoryEventBus)
 

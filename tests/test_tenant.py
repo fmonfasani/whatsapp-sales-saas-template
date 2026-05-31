@@ -12,7 +12,7 @@ import pytest
 from services.api.main import _client as live_client
 from services.api.main import app
 
-from sample import Tenant, TenantStatus, Client
+from sample import Client, Tenant, TenantStatus
 from sample.tenant import (
     InMemoryTenantRepository,
     InMemoryTenantSpawner,

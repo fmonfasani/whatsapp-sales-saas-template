@@ -81,6 +81,7 @@ ignore = [
     "ANN101",   # removed in newer ruff — harmless to list
     "ANN102",   # removed in newer ruff — harmless to list
     "PLR0913",  # too-many-args: false-positive for clean constructor injection
+    "RUF022",   # __all__ sort: different ruff versions disagree on case order; not worth churn
 ]
 
 [tool.ruff.lint.per-file-ignores]
@@ -96,6 +97,14 @@ ignore = [
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
+
+[tool.ruff.lint.isort]
+# Treat the slug's package as first-party even before init.py runs, so the
+# import sections in tests/services/api files stay separated from third-party.
+known-first-party = ["sample"]
+# Group `from foo import x` and `import foo` together within a section so
+# imports follow a single block per logical group.
+force-sort-within-sections = true
 
 # -----------------------------------------------------------------------------
 # mypy — strict from day 1. Loosening later is easier than tightening.

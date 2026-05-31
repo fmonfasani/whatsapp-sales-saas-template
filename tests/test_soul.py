@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import pytest
 
-from sample import SoulConfig, TenantManager, TenantStatus, Client
+from sample import Client, SoulConfig, TenantManager, TenantStatus
 
 pytestmark = pytest.mark.unit
 

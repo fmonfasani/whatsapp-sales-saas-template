@@ -23,11 +23,11 @@ moment you have Python 3.11+ on PATH, before you've even created the venv.
 from __future__ import annotations
 
 import contextlib
+from pathlib import Path
 import re
 import shutil
 import subprocess
 import sys
-from pathlib import Path
 
 # Files that contain ``{{ ... }}`` placeholders. Walking *everything* would
 # accidentally rewrite content in binary files or someone's lock file later
