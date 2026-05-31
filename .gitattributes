@@ -1,0 +1,18 @@
+# Normalize line endings to LF on commit (matters most on Windows/macOS mixes).
+* text=auto eol=lf
+
+# Binary files we don't want git mangling
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.tar.gz binary
+*.whl binary
+
+# Mark generated / vendored files so PR diff is collapsed by default
+poetry.lock linguist-generated
+package-lock.json linguist-generated
+yarn.lock linguist-generated

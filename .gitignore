@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtualenvs
+.venv/
+venv/
+env/
+ENV/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Tooling caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+
+# Type stubs
+.dmypy.json
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+*.swp
+
+# Env / secrets — never commit local config
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS
+Thumbs.db
+ehthumbs.db
+
+# Local state — anything you don't want history-tracked
+data/
+tmp/
+*.log
+
+# Node / Next.js (dashboards)
+node_modules/
+.next/
+dashboard/admin/.next/
+dashboard/client/.next/
+
+# T3: brand + tenant config is per-deployment, never committed.
+# Only the .example templates ship in the repo.
+config/branding/*
+!config/branding/README.md
+!config/branding/*.example.yaml
+config/tenants/*
+!config/tenants/README.md
+!config/tenants/*.example.yaml

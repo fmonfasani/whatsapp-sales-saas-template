@@ -1,0 +1,9 @@
+# Tenant seed — copy + rename to <slug>.yaml (gitignored) to register a tenant
+# at bootstrap. Most projects can skip this entirely and create tenants via the
+# POST /tenants endpoint or the dashboard.
+
+id: "tenant-acme"
+name: "Acme Sales Co"
+slug: "acme"
+model: "anthropic/claude-3-haiku"
+whatsapp_phone_number_id: "<set after Meta Embedded Signup>"
